@@ -1,0 +1,33 @@
+if sess.user
+	.col-md-1(style={border:none})#header_pic
+		a(id="myprofil" href='/profil/' + user_id)
+			img(src= profil_pic)
+	.col-md-3(style={border:none})#info_header
+		.row(style={border:none})
+			.col-md-12#login_header(style={border:none})
+				span #{sess.user.login}
+		.row(style={border:none})
+			.col-md-12(style={border:none})
+				i.far.fa-star
+				span #{sess.user.sexappeal} pts
+	.col-md-4.matcha
+		a(href='/') Matchounet
+		i.fab.fa-pagelines
+	.col-md-2
+	.col-md-2(style={border:none}).col_login
+		a(href='/logout') 
+			button#login_button Se déconnecter
+			
+else
+	.col-md-1(style={border:none})
+	.col-md-3(style={border: none})
+	.col-md-4.matcha
+		h1 Matchounet
+		i.fab.fa-pagelines
+	.col-md-2
+	.col-md-2(style={border: none}).col_login
+		button#login_button Se connecter
+		include login_modal.pug
+		
+			
+		

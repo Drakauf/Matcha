@@ -1,0 +1,8 @@
+extends base.pug
+block head-content
+  title= title
+block body-content
+  if user.description
+    h1= h1
+  else
+    p.description No Desc

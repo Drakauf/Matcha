@@ -1,0 +1,9 @@
+.modal-content {
+	border : 1px solid #D73C3C;
+}
+
+.modal-header, .modal-body {
+ 	background-color: #FCFAE1;
+ }
+ 
+

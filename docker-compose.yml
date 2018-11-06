@@ -1,0 +1,33 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=devpass
+      - MYSQL_DATABASE=matcha
+      - MYSQL_USER=devuser
+      - MYSQL_PASSWORD=devpass
+  app:
+    build:
+      context: ./app/
+    command: /usr/app/node_modules/.bin/nodemon src/server.js
+    volumes:
+      - ./app/:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    env_file: ./app/.env
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8003:80"
+    links:
+      - mysql
+    environment:
+      - PMA_HOST=mysql

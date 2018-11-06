@@ -1,0 +1,16 @@
+extends base.pug
+block head-content
+block body-content
+		include photos_modal.pug
+		.row-fluid#uploaddiv
+			if (uploaderror)
+				.col-md-12#uploaderror.alert.alert-danger(data-alert='')
+					p Vous pouvez télécharger seulement de photos en format jpeg, png, jpg ou gif.
+		form#form_upload_pic(action='/upload', enctype='multipart/form-data', method='post')
+			input#input_file(type='file', name='file')
+			input#input_upload(type='submit', value='Télécharger')
+		.row#all_pictures
+			if data
+				each val  in data
+					.col-md-3
+						img.all_images(id= val.id , src=val.picture)

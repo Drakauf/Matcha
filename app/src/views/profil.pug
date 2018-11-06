@@ -1,0 +1,97 @@
+extends base.pug
+block head-content
+block body-content
+	script(src="/js/profil.js")
+	if (matchme == 1)
+		.row#matchme
+			i.fas.fa-heartbeat
+	.row#profil
+		.col-md-4
+		.col-md-4
+			img(src= pprof)
+		.col-md-4
+	.row
+		.col-md-2
+		.col-md-4
+			h2.login=login
+		.col-md-4
+			if (last_seen != "En ligne")
+				.last_seen_red
+					span Dernière visite il y a
+					span= last_seen
+			else
+				p.last_seen_green En ligne
+		.col-md-2
+	.row.separation
+		.col-md-2
+		.col-md-8
+			hr
+		.col-md-2
+	.row#userdetail
+		.col-md-1
+		.col-md-2
+			p.border_right=lname
+		.col-md-2
+			p.border_right=fname
+		.col-md-2
+			p.border_right=gender
+		.col-md-2
+			p.border_right=dob
+		.col-md-2
+			p=pts 
+		.col-md-1
+	.row#usertags
+		.col-md-1
+		.col-md-10#tags
+				if (tags == 0)
+					p Have no tags yet
+				else
+					each val in tags
+						.tag_profil=val.tag
+		.col-md-1
+	.row#descphoto
+		.col-md-4
+			.row
+				img(src=desc1).border_bottom
+			.row
+				img(src=desc2)
+		.col-md-4
+			.row
+				textarea.bio=bio
+		.col-md-4
+			.row
+				img(src=desc3).border_bottom
+			.row
+				img(src=desc4)
+	.row#location_profil
+		i.fas.fa-location-arrow
+		p#ip_city= ip_city
+		p#ip_zip= ip_zip
+	.row
+		.col-md-2
+		.col-md-8
+			#ip_latitude(style={display: 'none'})= ip_latitude
+			#ip_longitude(style={display: 'none'})= ip_longitude
+			div#mapholder
+		.col-md-2
+		#err_profil
+	if (itsme)
+		.row
+			div#button_error
+			.col-md-1
+			.col-md-4
+				if (matched == 0)
+					button#match Matcher
+					button(style={display: 'none'})#unmatch Unmatcher
+				else
+					button(style={display: 'none'})#match Matcher
+					button#unmatch Unmatcher
+			.col-md-4
+					button#message Contacter
+			.col-md-3
+				if(!ireport)
+					.row
+						button#report Reporter
+				.row
+					button#block Bloquer
+			.col-md-1

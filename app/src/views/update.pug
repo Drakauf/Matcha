@@ -1,0 +1,144 @@
+extends base.pug
+block head-content
+block body-content
+	include blocked_modal.pug
+	#update
+		.row-fluid
+			#form_unfill.alert.alert-danger(style={display: form_unfill})
+				p Remplis tout ton profil pour commencer à Matcher ;) 
+		form.row-fluid#update_form_names(role='form' style={border: ''})
+			.col-md-12
+				.form-group.row#update_names(style={border: 'none'})
+					label.col-md-3.col-form-label(for='username_update') pseudonyme :
+					.col-md-9
+						input#username_update.form-control(type='text', placeholder= username)
+					label.col-md-3.col-form-label(for='last_name_update') Nom :
+					.col-md-9
+						input#last_name_update.form-control(type='text', placeholder= last_name)
+					label.col-md-3.col-form-label(for='first_name_update') Prénom :
+					.col-md-9
+						input#first_name_update.form-control(type='text', placeholder= first_name)
+					label.col-md-3.col-form-label(for='email_update') E-mail :
+					.col-md-9
+						input#email_update.form-control(type='email', placeholder= email)
+			div#result_update_form_names
+			input.btn.btn-success.btn-block.form-control(type='submit', value=" Modifier les informations")
+		form.row-fluid#update_form_address(role='form' style={border: ''})
+			.col-md-12
+				.form-group.row#update_address(style={border: 'none'})
+					label.col-md-2.col-form-label(for='number_address_update') N° :
+					.col-md-2
+						input#number_address_update.form-control(type='number', placeholder= number_address, min='1', required='')
+					.col-md-1
+					label.col-md-2.col-form-label(for='street_update') Rue :
+					.col-md-5
+						input#street_update.form-control(type='text', placeholder= street, required='')
+					label.col-md-2.col-form-label(for='city_update') Ville :
+					.col-md-3
+						input#city_update.form-control(type='text', placeholder= city, required='')
+					label.col-md-3.col-form-label(for='zip_update') Code postal :
+					.col-md-3
+						input#zip_update.form-control(type='number', placeholder= zip, min='0', required='')
+					.col-md-1
+					//- label.col-md-2.col-form-label(for='country_update') Pays :
+					//- .col-md-2
+					//- 	input#country_update.form-control(type='text', placeholder= country, required='')
+					label.col-md-5.col-form-label(for='complement_update') Informations complémentaires :
+					.col-md-7
+						input#complement_update.form-control(type='text', placeholder= complement)
+			div#result_update_form_address
+			div#suggestions
+			input.btn.btn-success.btn-block.form-control(type='submit', value=" Modifier les informations")
+		form.row-fluid#update_form_password(role='form' style={border: ''})
+			.col-md-12
+				.form-group.row#update_password(style={border: 'none'})
+					label.col-md-6.col-form-label(for='password_update') Mot de passe :
+					.col-md-6
+						input#password_update.form-control(type='password', placeholder='', required='')
+					label.col-md-6.col-form-label(for='new_password_update') Nouveau mot de passe :
+					.col-md-6
+						input#new_password_update.form-control(type='password', placeholder='', required='')
+					label.col-md-6.col-form-label(for='confirm_new_password_update') Confirmer nouveau mot de passe :
+					.col-md-6
+						input#confirm_new_password_update.form-control(type='password', placeholder='', required='')
+			div#result_update_form_password
+			input.btn.btn-success.btn-block.form-control(type='submit', value=" Modifier les informations")
+		form.row-fluid#update_form_lookingfor(role='form' style={border: ''})
+			.col-md-12
+				.form-goup.row#update_lookingfor(style={border: 'none'})
+					label.col-md-4 Je suis : 
+						.form-check-inline
+							input.gender_update.form-check-input(type='radio', name='gender', value='Femme' checked= checked_IamW)
+							label.form-check-label(for='gender_update') F
+						.form-check-inline
+							input.gender_update.form-check-input(type='radio', name='gender',value='Homme' checked= checked_IamM)
+							label.form-check-label(for='gender_update') H
+					.col-md-8
+					label.col-md-12 Je cherche : 
+						.form-check.form-check-inline
+							input.affinity_update.form-check-input(type='radio', name='affinity', value='Femme' checked= checked_lookingforW)
+							label.form-check-label(for='affinity_update') F
+						.form-check-inline
+							input.affinity_update.form-check-input(type='radio', name='affinity',value='Homme' checked= checked_lookingforM)
+							label.form-check-label(for='affinity_update') H
+						.form-check-inline
+							input.affinity_update.form-check-input(type='radio', name='affinity',value='bisexuel(le)' checked= checked_lookingforB)
+							label.form-check-label(for='affinity_update') Les deux		
+					label.col-md-3.col-form-label(for='age_range_update') Tranche d'âge :
+					.col-md-2
+						input#age_less_update.form-control(type='number', min='18', max='77', placeholder= affinity_age_less)
+					.col-md-1 
+						i.fas.fa-arrows-alt-h#arrow
+					.col-md-2
+						input#age_more_update.form-control(type='number', min='18', max='77', placeholder= affinity_age_more)
+					.col-md-1
+					.col-md-3
+			div#result_update_form_lookingfor
+			input.btn.btn-success.btn-block.form-control(type='submit', value=" Modifier les informations")
+		form.row-fluid#update_form_biography(role='form' style={border: ''})
+			.col-md-12
+				.form-goup.row#update_biography(style={border: 'none'})
+					label.col-md-12.col-form-label(for='biography_update') Biographie (255 caractères maximum) :	
+					textarea#biography_update.form-control(type='text', placeholder= biography)
+			div#result_update_form_biography
+			input.btn.btn-success.btn-block.form-control(type='submit', value=" Modifier les informations")
+		form.row-fluid#tags_form(role='form' style={border: ''})
+			.col-md-12
+				.form-group.row#tag(style={border: 'none'})
+					label.col-md-12.col-form-label Mes tags :
+					if (tags)
+						each val, index in tags
+							div(id= index).delete_tag.col-md-3
+								div.tag_div
+									p= val.tag
+										button.close.close_tag(type='button', id= index + val.tag) x
+				.form-group.row#submit_tag(style={border: 'none'})
+					.col-md-12
+						div#result_error_tag
+					.col-md-6
+						input#new_tag.form-control(type='text', placeholder='#catlover', value='#')
+					.col-md-6
+						input.btn.btn-primary.btn-block.form-control(type='submit', value="ajouter")
+		.row-fluid#update_pictures(style={border: ''})
+			.row
+				.col-md-5
+						span Tes photos de profil
+				.col-md-3
+				.col-md-3
+					a(href="/user/photos") 
+						input.btn.btn-secondary#add_picture(type='button' value='+ Modifier les photos') 
+			.row
+				img(src= pprof).col-md-2#pprof_update
+				img(src= desc1).col-md-2.pic_update
+				img(src= desc2).col-md-2.pic_update
+				img(src= desc3).col-md-2.pic_update
+				img(src= desc4).col-md-2.pic_update
+		.row#user_blocked_form(role='form' style={border: ''})
+			.col-md-4
+				button.btn.btn-danger.btn-block#blocked_button Débloquer
+			
+	
+		
+	script(src="/js/update.js")
+	script(src="/js/blocked_modal.js")
+	//- 

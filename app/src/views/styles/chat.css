@@ -1,0 +1,40 @@
+#chat {
+	height: 100%;
+}
+
+#chat_nav {
+	border-right: 1px solid #D73C3C;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.5vw;
+}
+
+#msg {
+	overflow-wrap: break-word;
+	border-radius: 5px;
+	margin-bottom: 3%;
+	font-size: 1.2vw;
+	font-family: 'Poppins', sans-serif;
+}
+
+#login2_title {
+	padding: 2%;
+	text-align: center;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	margin-bottom: 2%;
+}
+
+#form_chat form{
+	width: 100%;
+	display: flex;
+}
+
+#m {
+	width: 80%;
+	height: 100%;
+	border-top: 1px solid grey;
+}
+
+#button_m {
+	width: 20%;
+	height: 100%;
+}

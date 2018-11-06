@@ -1,0 +1,18 @@
+#user_blocked {
+	font-size: 1vw;
+	display: flex;
+	justify-content: space-around;
+}
+
+#user_block2 {
+	width: 100%;
+	font-size: 1vw;
+	border-right: 1px solid #D73C3C;
+	font-family: 'Poppins', sans-serif;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10%;
+
+}
+

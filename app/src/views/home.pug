@@ -1,0 +1,96 @@
+extends base.pug
+block head-content
+block body-content
+	#home
+		.row#header_matcha_shop
+			.col-md-8#matcha_shop
+				h2 Matcha Shop
+			.col-md-4
+				input.btn.btn-secondary#connected(type='button', value= online, style={display: online_style})
+		.row
+			.col-md-12
+		.row#card
+			.col-12.card.card-sm
+				form#searching_bar
+					.card-body.row.no-gutters.align-items-center
+						.col-md-1
+							i.fas.fa-search.h5.text-body
+						.col-md-5
+							input#search.form-control.form-control-md.form-control-borderless(type='search', placeholder='Drakauf_92')
+						.col-md-1
+						.col-md-2
+							button.btn.btn-success(type='submit') Rechercher
+						.col-md-3
+							button.btn.btn-success#more_filters(type='button' style={display: button_search}) Affiner la recherche
+						.col-md-12#result_error_search
+				form(style={display: filters}).row#filters
+					.col-md-12
+						.row
+							label.col-md-3.col-form-label(for='age_range_update') Tranche d'âge :
+							.col-md-2
+								input#age_less_home.form-control(type='number', min='18', max='77')
+							.col-md-2
+								span ans à
+							.col-md-2
+								input#age_more_home.form-control(type='number', min='18', max='77')
+							.col-md-1
+								span ans
+							.col-md-2
+					.col-md-12
+						.row
+							label.col-md-3.col-form-label(for='km') Kilomètres maximum:
+							.col-md-2
+								input#km.form-control(type='number', min='0', max='1000')
+					.col-md-12
+						.row
+							label.form-check-label.col-auto(for='popularity') Par popularité :
+							.col-auto
+								input#popularity.form-check-input(type='checkbox', name='popularity')
+					.col-md-12
+						.row
+							label.form-check-label.col-auto(for='user_connected') Utilisateurs connectés :
+							.col-auto
+								input#user_connected.form-check-input(type='checkbox', name='user_connected')
+					.col-md-12
+						.row
+							label.col-auto.col-form-label(for='common_tag') Nombre de tags minimum en commun :
+							.col-auto
+								input#common_tag.form-control(type='number', min='0', max='1000')
+					.col-md-12
+						.row
+							.col-md-12
+								#result_error_home
+							.col-md-12
+								button.btn.btn-block.btn-success#more_filters(type='submit') Affiner la recherche
+		.row
+			if (user)
+				each val, index in user
+					.col-md-3#users_home
+						a(href="/profil/" + user[index].id)
+							.row(style={border: 'none'})#row1_user_home
+									div#online(style={background: user[index].last_seen}) 
+									img(src=user[index].picture)
+							.row(style={border: 'none'})#row2_user_home
+								.col-md-2
+								.col-md-8(style={border: 'none'})
+									.row.position_home#home_login
+										span= user[index].login
+									.row.position_home
+										span= user[index].birth_date
+										|  &nbsp ans
+								.col-md-2
+							.row(style={border: 'none'})#row3_user_home
+								.col-md-2
+								.col-md-8(style={border: 'none'}).position_home
+									//- to supperpose
+									i.far.fa-star#star
+									span= user[index].sexappeal 
+									| pts 
+								.col-md-2
+							.row(style={border: 'none'})#row4_user_home
+							.row(style={border: 'none'})#row5_user_home
+								.col-md-3
+								.col-md-6.position_home#home_city
+									p= user[index].city
+								.col-md-3
+		script(src="/js/home.js")

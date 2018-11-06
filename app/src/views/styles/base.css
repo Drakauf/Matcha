@@ -1,0 +1,109 @@
+html {
+	height: 100%;
+	position: relative;
+}
+
+body {
+	background-image: url("/images/common_background.jpg");
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+}
+
+form {
+	background-color: #FCFAE1;
+} 
+
+input[type=password], input[type=date], input[type=email] {
+    background-color: #f1f1f1;
+}
+
+h2 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 2vw;
+}
+
+#body {
+	font-size: 1.4vw;
+}
+
+.form-control {
+	font-size: 1vw;
+	height: 90%;
+	background-color: #f1f1f1;
+}
+
+.btn-secondary {
+	background-color: #7BCC70;
+	color: black;
+	border: 1px solid #D73C3C;
+	font-size: 1.2vw;
+}
+
+.btn-secondary:hover {
+	background-color: #6eb764;
+	color: black;
+	border: 1px solid #D73C3C;
+	font-size: 1.2vw; 
+}
+
+#body input[type=submit], .btn-success, #submit_matcha, #login_matcha {
+	background-color: rgb(189, 227, 220);
+	color: black;
+	border: 1px solid #D73C3C;
+	font-size: 1.2vw;
+	box-shadow: none;
+	border-radius: 5px;
+}
+
+#body input[type=submit]:hover ,.btn-success:hover, #submit_matcha:hover, #login_matcha:hover, #login_button:hover {
+	background-color: rgb(148, 195, 187);
+	color: black;
+	border: 1px solid #D73C3C; 
+	font-size: 1.2vw;
+}
+
+.cancel_matcha, .btn-danger {
+	background-color: rgb(244, 170, 170);
+	color: black;
+	border: 1px solid #D73C3C; 
+	font-size: 1.2vw;
+}
+
+.new_notif {
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+}
+
+#body {
+	background-color: #FCFAE1;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px #888888;
+	border : 1px solid #D73C3C;
+	overflow: auto;
+}
+/*
+#main {
+	height: 100%;
+	bottom: 0;
+}*/
+
+
+#section {
+	font-size: 1.5vw;
+	height: 60%;
+	margin-bottom: 2%;
+	margin-left: 1%;
+	margin-right: 1%;
+	height: 100%;
+}
+
+#footer {
+	height: 10%;
+}
+
+#TEST {
+	height: 25vh;
+}

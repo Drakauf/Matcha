@@ -1,0 +1,152 @@
+.card {
+    background-color:  #FCFAE1;
+    margin-bottom: 2%;
+}
+
+#header_matcha_shop {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#matcha_shop {
+  text-align: center;
+}
+
+#home .btn{
+	font-size: 1.2vw;
+}
+
+#users_home {
+
+  border: 1px solid #D73C3C;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(189, 227, 220);
+	margin-right: 4%;
+	margin-left: 4%;
+	margin-bottom: 2%;
+  font-size: 1.4vw;
+}
+
+#users_home:hover {
+  box-shadow: 2px 2px 5px rgb(244, 170, 170);
+}
+
+#users_home a {
+  text-decoration: none;
+  color: black;
+}
+
+#users_home img {
+	width: 100%;
+	height: 100%;
+  border-radius: 5px 5px 0px 0px;
+  position: relative;
+  z-index: 1;
+}
+
+#online {
+  margin-top: 2%;
+  margin-left: 2%;
+  position: absolute;
+  z-index: 2;
+	height: 10px;
+	width: 10px;
+	border: 1px solid black;
+	border-radius: 50%;
+}
+
+#row1_user_home {
+  height: 50%;
+}
+
+#row2_user_home {
+  height: 22%;
+}
+
+#row3_user_home {
+  height: 11%;
+}
+
+#row4_user_home {
+  height: 5%;
+}
+
+#row5_user_home {
+  height: 12%;
+}
+
+#home_name {
+	width: 50%;
+}
+
+#home_login {
+  margin-bottom: 8%;
+  font-weight: bold;
+}
+
+#home_city {
+  border-top: 1px solid #D73C3C;
+}
+
+.position_home {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+#star {
+  color: #D73C3C;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9; 
+}
+
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}

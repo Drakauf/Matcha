@@ -1,0 +1,23 @@
+#login_modal.modal.fade(role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h2 Se connecter
+        button.close(type='button', data-dismiss='modal') x
+      .modal-body
+        form#login_form(role='form')
+          .form-group
+            label(for='username')
+              i.far.fa-user
+              |  Pseudonyme
+            input#username_login.form-control(type='text', placeholder='Drakauf_92')
+          .form-group
+            label(for='pwd')
+              i.fas.fa-key
+              |  Mot de passe
+            input#pwd_login.form-control(type='password', placeholder='••••••••••')
+          div#login_fail
+          button.btn.btn-success.btn-block#login_matcha(type='submit')
+            |  Se connecter
+          p 
+            a(href='/login/forget') Mot de passe oublié ?

@@ -1,0 +1,64 @@
+#form_upload_pic {
+	margin-top: 2%;
+}
+
+#uploaderror {
+	margin-top: 2%;
+	text-align: center;
+}
+
+#input_file {
+	width: 80%;
+	margin-bottom: 2%;
+	margin-right: 2%;
+}
+
+#input_upload {
+	width: 18%;
+}
+
+#all_pictures {
+	border: 1px solid #D73C3C;
+	padding: 2%;
+	margin-right: 0.5%;
+	margin-left: 0.5%;
+	margin-bottom: 2%;
+	border-radius: 5px;
+}
+
+.all_images {
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #D73C3C;
+	margin-bottom: 2%;
+	box-shadow: 2px 2px 5px rgb(189, 227, 220);
+}
+
+.all_images:hover {
+	box-shadow: 2px 2px 5px rgb(244, 170, 170);
+}
+
+.modal_image {
+	width: 40%;
+	border-radius: 5px;
+	border: 1px solid #D73C3C;
+	box-shadow: 2px 2px 5px rgb(189, 227, 220);
+	margin-bottom: 2%;
+	margin-right: 2%;``
+}
+
+.desc, .del {
+	font-size: 1.2vw;
+	font-family: 'Poppins', sans-serif;
+	margin-right: 1%;
+	border-radius: 5px;
+}
+
+.desc:hover
+{
+	background-color: blue;
+}
+
+.del:hover {
+	background-color: rgb(183, 28, 28);
+}

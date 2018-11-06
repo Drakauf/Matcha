@@ -1,0 +1,16 @@
+#blocked_modal.modal.fade(role='dialog')
+  .modal-dialog
+    // Modal content
+    .modal-content
+      .modal-header
+        h2 Utilisateurs bloqués
+        button.close(type='button', data-dismiss='modal') x
+      .modal-body
+        .row#user_blocked
+          if (login_blocked)
+            each val, index in login_blocked
+              div(id=val + 2) 
+                div(style={border: '1px solid red'}).col-md-12#user_block2
+                  img(src= picture_blocked[index])
+                  figcaption= val
+                  button.unblock(id = val) Débloquer

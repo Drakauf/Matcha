@@ -1,0 +1,58 @@
+extends base.pug
+block head-content
+block body-content
+	.row
+		.col-md-4
+		.col-md-4
+			h2#welcome Mon Journal
+		.col-md-4
+	.row-fluid.elements
+		.row
+			.col-md-12
+				p#visits Ils ont récemment visité ton profil :
+		.newuser
+			if (viewers) 
+				each val, index in viewers
+					.users_news
+						a(href='/profil/' + viewers[index].id)
+							div.new_notif(style={background: viewers[index].read_statut}) 				
+							img#newspic(src= viewers[index].picture)
+							.newslogin=viewers[index].login
+	.row-fluid.elements
+		.row
+			.col-md-12
+				p#newsmatch Ils ont matché avec toi :
+		.newuser
+			if (match) 
+				each val, index in match
+					.users_news
+						a(href='/profil/' + match[index].id)
+							div.new_notif(style={background: match[index].read_statut}) 
+							img#newspic(src= match[index].picture)
+							.newslogin=match[index].login
+	.row-fluid.elements
+		.row
+			.col-md-12
+				p#newsunmatch Ils t'ont matché en retour :
+		.newuser
+			if (match_back) 
+				each val, index in match_back
+					.users_news
+						a(href='/profil/' + match_back[index].id)
+							div.new_notif(style={background: match_back[index].read_statut}) 
+							img#newspic(src= match_back[index].picture)
+							.newslogin=match_back[index].login
+	.row-fluid.elements
+		.row
+			.col-md-12
+				p#newsunmatch Ils ont unmatché avec toi :
+		.newuser
+			if (unmatch) 
+				each val, index in unmatch
+					.users_news
+						a(href='/profil/' + unmatch[index].id)
+							div.new_notif(style={background: unmatch[index].read_statut}) 
+							img#newspic(src= unmatch[index].picture)
+							.newslogin=unmatch[index].login
+	
+

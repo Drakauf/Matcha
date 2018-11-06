@@ -1,0 +1,34 @@
+extends base.pug
+block head-content
+block body-content
+	.row
+		#blocked_conversation
+	.row#chat
+		.col-md-3#chat_nav
+			if (chats)
+				each val,index in chats
+					.row
+						div.new_notif(style={background: chats[index].read_statut})
+						if (chats[index].login == 'utilisateur bloqué')
+							button.blocked_conversation(id= chats[index].id, style={width: '100%'})= chats[index].login
+						else
+							button.conversation(id= chats[index].id, style={width: '100%'})= chats[index].login
+		.col-md-9
+			.row#messages
+				.col-md-12
+					h2#login2_title= login2
+					if (history)
+						each val, index in history
+							.row
+								.col-md-1
+								div(class= history[index].user2_message )
+								.col-md-5#msg(style={'background-color': history[index].backcol})
+									span= history[index].message
+								.col-md-1
+			#err_chat
+			.row#form_chat
+				form(action='', style={display: chat})
+					//- #first_co
+					textarea#m(autocomplete='')
+					button#button_m Send
+	script(src="/js/chat.js")

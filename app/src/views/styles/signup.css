@@ -1,0 +1,23 @@
+#register {
+	background-color: #FCFAE1;
+	border:1px solid black;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px #888888;
+	border : 1px solid #D73C3C;
+	margin-left: 20%;
+	margin-right: 20%;
+	padding-right: 1%;
+	padding-left: 1%;
+	padding-top: 1%;
+}
+
+#register, #register input, #register button {
+	width: 60%;
+	font-size: 0.9vw;
+}
+
+
+#signup_form input {
+	height: 3vw;
+}
+

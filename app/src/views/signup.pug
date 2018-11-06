@@ -1,0 +1,40 @@
+.col-md-12
+  h2 Inscris toi !
+  form#signup_form(role='form')
+      .form-group
+        label(for='username')
+        i.far.fa-user
+        |  Pseudonyme (8 caractères maximum)
+        input.form-control#username_register(value='', type='text', placeholder='Drakauf_92')
+      .form-group
+        label(for='last_name')
+        |  Nom
+        input#last_name.form-control(type='text', placeholder='Imum')
+      .form-group
+        label(for='first_name')
+        |  Prénom
+        input#first_name.form-control(type='text', placeholder='Max')
+      .form-goup
+        label(for='birth_date')
+        | Date de naissance :
+        input#birth_date.form-control(type='date', placeholder='' min="1941-01-02")
+      .form-group
+        label(for='pwd')
+        i.fas.fa-key
+        |  Mot de passe
+        input#pwd_register.form-control(type='password', placeholder='••••••••••')
+      .form-group
+        label(for='confirm_pwd')
+        |  Confirmer mot de passe
+        input#confirm_pwd.form-control(type='password', placeholder='••••••••••')
+      .form-group
+        label(for='e-mail')
+        i.far.fa-envelope
+        |  E-mail
+        input#email.form-control(type='email', placeholder='Drakauf_92@io.com')
+      div#result_signup
+      input.btn.btn-success.btn-block.form-control#submit_matcha(type='submit', value="S'inscrire")
+      .modal-footer
+        button.btn.btn-danger.btn-default.pull-left.cancel_matcha(type='reset', data-dismiss='modal')
+          |  Annuler
+script(src="/js/signup.js")

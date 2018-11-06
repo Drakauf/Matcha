@@ -1,0 +1,47 @@
+#welcome {
+	text-align : center;
+	margin-top: 3%;
+	margin-bottom: 5%;
+}
+
+#newspic {
+	width: 100%;
+}
+
+.elements {
+	justify-content: center;
+	text-align: center;
+	margin-bottom: 2%;
+	border: 1px solid #D73C3C;
+	border-radius: 5px;
+}
+
+.newuser {
+	margin-top: 1%;
+	background-color: #f1f1f1;
+	margin-right: 0%;
+	margin-left: 0%;
+	border-radius: 0px 0px 5px 5px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	width: 100%;
+	overflow-x: auto;
+}
+
+.users_news {
+	border: 1px solid #D73C3C;
+	border-radius: 5px;
+	margin: 1%;
+	width: 7vw;
+}
+
+.users_news a:hover {
+	text-decoration: none;
+}
+
+.newslogin {
+	overflow: auto;
+	font-size: 0.7vw;
+	color: black;
+}

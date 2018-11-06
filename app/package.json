@@ -1,0 +1,38 @@
+{
+  "name": "Matcha",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aelaiig/Matcha"
+  },
+  "description": "Web project Matcha @ Le-101",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "0.8.0",
+    "bcrypt": "^3.0.0",
+    "body-parser": "1.18.3",
+    "geoip-lite": "^1.3.2",
+    "express": "^4.16.3",
+    "express-logging": "^1.1.1",
+    "express-session": "^1.15.6",
+    "moment": "^2.22.2",
+    "public-ip": "^2.4.0",
+    "node-geocoder": "^3.22.0",
+    "smtp-server": "^3.4.7",
+    "nodemailer": "^4.6.8",
+    "logops": "^2.1.0",
+    "nodemon": "^1.14.7",
+    "mysql": "2.16.0",
+    "pug": "^2.0.3",
+    "formidable": "1.2.1",
+    "is-image": "2.0.0",
+    "timediff": "1.1.1",
+    "socket.io": "~1.2.1",
+    "ent": "~0.1.0"
+  }
+}
